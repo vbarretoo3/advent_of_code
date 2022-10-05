@@ -7,4 +7,8 @@ dark olive bags contain 3 faded blue bags, 4 dotted black bags.
 vibrant plum bags contain 5 faded blue bags, 6 dotted black bags.
 faded blue bags contain no other bags.
 dotted black bags contain no other bags.'''
-with open('')
+data =  open('C:/Users/VictordeOliveira/Documents/GitHub/advent_of_code/2020/07/input.txt')
+input = data.read()
+database = test
+answers = database.strip()
+print(answers.split('\n'))
