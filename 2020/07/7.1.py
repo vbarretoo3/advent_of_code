@@ -9,6 +9,31 @@ faded blue bags contain no other bags.
 dotted black bags contain no other bags.'''
 data =  open('C:/Users/VictordeOliveira/Documents/GitHub/advent_of_code/2020/07/input.txt')
 input = data.read()
-database = test
+database = input
 answers = database.strip()
-print(answers.split('\n'))
+dirty = answers.split('\n')
+colors_line = []
+color_unique_total = []
+
+def check_color(entry):
+    color_unique = []
+    for item in dirty:
+        if entry in item:
+            word = item.split()
+            color_1 = word[0] + ' ' + word[1]
+            if color_1 != entry:
+                if color_1 not in color_unique:
+                    color_unique.append(color_1)
+    for item in color_unique:
+        if item not in color_unique_total:
+            color_unique_total.append(item)                    
+    for item in color_unique:
+        check_color(item)
+    
+    return len(color_unique_total)
+
+
+solution = check_color('shiny gold')
+    
+
+print(solution)
