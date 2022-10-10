@@ -1,5 +1,4 @@
 import numpy as np
-from pandas import array
 
 def solve1(path):
     with open(path) as f:
